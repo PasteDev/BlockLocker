@@ -157,6 +157,13 @@ public class SignChangeListener extends EventListener {
 
     @EventHandler(ignoreCancelled = true)
     public void onSignChange(SignChangeEvent event) {
+        // Comprobación de permisos
+        if (!event.getPlayer().hasPermission(Permissions.CAN_PROTECT)) {
+            event.getPlayer().sendMessage("No tienes permiso para cambiar o añadir carteles.");
+            event.setCancelled(true);
+            return;
+        }
+
         Optional<Protection> protection = plugin.getProtectionFinder().findExistingProtectionForNewSign(event.getBlock());
 
         if (protection.isPresent()) {
@@ -167,6 +174,7 @@ public class SignChangeListener extends EventListener {
             handleSignNotNearbyProtection(event);
         }
     }
+
 
     /**
      * Call this method for newly created protections. The next tick the

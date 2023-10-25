@@ -25,6 +25,13 @@ permissions:
 commands:
   blocklocker:
     description: "Administration commands for BlockLocker."
-    permission: "blocklocker.reload"
-    usage: "/<command> reload"
     aliases: "bl"
+    subcommands:
+      reload:
+        description: "Reload the plugin."
+        permission: "blocklocker.reload"
+        usage: "/blocklocker reload"
+      adduser:
+        description: "Add a user to a protection sign."
+        permission: "blocklocker.protect"
+        usage: "/blocklocker adduser <user> <line>"

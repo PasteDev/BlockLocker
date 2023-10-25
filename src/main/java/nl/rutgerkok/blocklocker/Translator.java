@@ -41,7 +41,17 @@ public abstract class Translator {
         TAG_TIMER,
         UPDATER_MORE_INFORMATION,
         UPDATER_UNSUPPORTED_SERVER,
-        UPDATER_UPDATE_AVAILABLE;
+        UPDATER_UPDATE_AVAILABLE,
+        ERROR_USER_NOT_FOUND,
+        ERROR_LINE_OCCUPIED,
+        COMMAND_ADDUSER_USAGE,
+        COMMAND_MUST_BE_PLAYER,
+        COMMAND_INVALID_LINE_NUMBER,
+        COMMAND_LINE_OUT_OF_BOUNDS,
+        COMMAND_NO_SELECTED_BLOCK,
+        COMMAND_ADDUSER_FAILED,
+        ERROR_GETTING_PROFILE,
+        COMMAND_ADDUSER_SUCCESS;
 
         /**
          * Gets the key used in configuration files.
@@ -66,7 +76,7 @@ public abstract class Translator {
      * Returns a list of all possible translations.
      *
      * @param key
-     * 			The key of the translation.
+     *          The key of the translation.
      * @return A list of all possible translations, or the key (in a list) if not found.
      */
     public abstract List<String> getAll(Translation key);
@@ -76,7 +86,7 @@ public abstract class Translator {
      * {@link ChatColor#stripColor(String)} applied.
      *
      * @param key
-     * 			The key of the translation.
+     *          The key of the translation.
      * @return A list of all possible translations, or the key (in a list) if not found.
      */
     public abstract List<String> getAllWithoutColor(Translation key);
@@ -95,7 +105,7 @@ public abstract class Translator {
      * Sends the specified message translated to the given player.
      *
      * @param player
-     *            The player (or console) to the send the message to.
+     *            The player (or console) to send the message to.
      * @param translation
      *            The message to send.
      */
@@ -105,7 +115,7 @@ public abstract class Translator {
      * Sends the specified message translated to the given player.
      *
      * @param player
-     *            The player (or console) to the send the message to.
+     *            The player (or console) to send the message to.
      * @param translation
      *            The message to send.
      * @param parameters

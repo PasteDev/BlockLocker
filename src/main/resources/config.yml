@@ -1,28 +1,3 @@
-# Config file of ${project.name}.
-# This file was originally created by version ${project.version}.
-
-# The language file used by the plugin. This will generate a file
-# with that name in this directory, which you can then customize
-# to edit the messages of this plugin.
-# These pre-made files are available in this plugin:
-# - translations-cs.yml (by PetyXbron)
-# - translations-de.yml (by Robert and Acursen)
-# - translations-en.yml
-# - translations-es.yml (by TheCiROMG)
-# - translations-fr.yml (by Kervinou)
-# - translations-hu.yml (by Crankiee)
-# - translations-id.yml (by DustyGanteng)
-# - translations-ja.yml (by ikafly144)
-# - translations-kr.yml (by iLar0213)
-# - translations-nl.yml
-# - translations-pl.yml (by Asentra_/KebabXL)
-# - translations-tr.yml (by ataturkthemcpro)
-# - translations-zh.yml (by 2125368097)
-# - translations-zh-tw.yml (by Shen-Ta Hsieh)
-# For other languages, you'll get the English translations as a
-# starting point. It is highly appreciated if you submit your
-# translations to the plugin author, so that others can use them
-# too. Danke schön, gracias, dankon and спасибо!
 languageFile: translations-en.yml
 
 # The updater. Possible values:
